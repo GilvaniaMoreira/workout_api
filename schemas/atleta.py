@@ -1,4 +1,8 @@
+from typing import Annotated, Optional
+from pydantic import Field, PositiveFloat
 from workout_api.contrib.schemas import BaseSchema, OutMixin
+from workout_api.schemas.categoria import CategoriaIn
+from workout_api.schemas.centro_treinamento import CentroTreinamentoAtleta
 
 
 class Atleta(BaseSchema):
