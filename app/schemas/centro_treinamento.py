@@ -1,7 +1,7 @@
 from typing import Annotated
 
 from pydantic import Field, UUID4
-from workout_api.contrib.schemas import BaseSchema
+from workout_api.app.contrib.schemas import BaseSchema
 
 
 class CentroTreinamentoIn(BaseSchema):

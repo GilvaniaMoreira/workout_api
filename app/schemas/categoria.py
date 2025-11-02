@@ -1,7 +1,7 @@
 from typing import Annotated
 
 from pydantic import UUID4, Field
-from workout_api.contrib.schemas import BaseSchema
+from workout_api.app.contrib.schemas import BaseSchema
 
 
 class CategoriaIn(BaseSchema):
