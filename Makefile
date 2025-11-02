@@ -1,8 +1,8 @@
 run:
-	@uvicorn workout_api.main:app --reload
+	@cd .. && uvicorn workout_api.main:app --reload --port 8001
 
 create-migrations:
-	@PYTHONPATH=$PYTHONPATH:$(pwd) alembic revision --autogenerate -m $(d)
+	@PYTHONPATH=..:$$PYTHONPATH alembic revision --autogenerate -m $(d)
 
 run-migrations:
-	@PYTHONPATH=$PYTHONPATH:$(pwd) alembic upgrade head
+	@PYTHONPATH=..:$$PYTHONPATH alembic upgrade head
